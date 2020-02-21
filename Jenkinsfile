@@ -29,5 +29,10 @@ pipeline{
             sh "docker build -t dimpal2110/dimpal:calculator" 
             }
         }
+        stage ("Docker Push"){
+            steps{
+            sh "docker push dimpal2110/dimpal:calculator"
+            }
+        }
     }
 }
