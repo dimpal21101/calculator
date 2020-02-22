@@ -31,6 +31,7 @@ pipeline{
         }
         stage ("Docker Push"){
             steps{
+                sh "docker login --username dimpal21101"
             sh "docker push dimpal2110/dimpal:calculator"
             }
         }
